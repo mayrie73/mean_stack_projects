@@ -1,0 +1,26 @@
+<div class="Container">
+  <h1>Browse the Ledger</h1>
+  <div *ngIf="ledger.length !=0">
+    <h3>Here you can browse all ShintoCoin transactions</h3>
+      <table class="center" border=1>
+      <caption>ShintoCoin Ledger</caption>
+        <tr>
+          <th>Action</th>
+          <th>Amount</th>
+          <th>Value</th>
+          <th> Details</th>
+        </tr>
+        <tr *ngFor="let transaction of ledger">
+          <td>{{transaction.action}}</td>
+          <td>{{transaction.amount}}</td>
+          <td>{{transaction.value}}</td>
+          <td>
+            <button [routerLink]="['/transaction', transaction.id]" value="{{ transaction.id }}">Details</button>
+          </td>
+        </tr>
+      </table>
+  </div>
+  <div *ngIf="ledger.length == 0">
+    <h3>Ledger is empty</h3>
+  </div>
+</div>

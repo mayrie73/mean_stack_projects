@@ -1,0 +1,32 @@
+<div>
+    <h2>Form to Edit a task</h2>
+    <p>{{ updatedAuthor | json}}</p>
+    <table class = "center" border=1>
+      <tr>
+        <th>Author ID</th>
+        <th>Name</th>
+       
+      </tr>
+      <tr>
+        <td>{{ updatedAuthor._id}}</td>
+        <td>{{ updatedAuthor.name}}</td>
+      </tr>
+    </table>
+      <form  (submit)="onSubmitEdit()">
+      Author ID : <input type="text" name="updatedAuthor._id" [(ngModel)]="updatedAuthor._id"  >
+      Name: <input type="text" name="updatedAuthor.name" [(ngModel)]="updatedAuthor.name"  >
+      <button input type="submit" value = "submit">Update Author</button>
+      <button [routerLink]="['/home']">Cancel</button>
+    </form>
+  </div>
+<!--<a [routerLink]="['/']">Home</a>
+<div  class="from-group">
+  <form  (submit)="onSubmitEdit()">
+    <input type="hidden" name="updateAuthor.author._id" [(ngModel)]="updatedAuthor.author._id"  > 
+    Name:<input type="text" name="updatedAuthor.name" [(ngModel)]="updatedAuthor.author.name"  >
+    <input type="submit" class="btn btn-primary" value="Submit" />
+    <input type="button" [routerLink]="['']" class="btn btn-primary" value="Cancel" />
+
+  </form>
+</div>-->
+  

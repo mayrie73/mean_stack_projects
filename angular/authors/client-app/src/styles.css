@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: papayawhip;
+    color: purple;
+    text-align: center;
+}
+button{
+    background-color:salmon;
+    border: purple 2px solid;
+    color: purple;
+    border-radius:5px;
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+caption{
+    background-color:salmon;
+    border: purple 2px solid;
+}
+input[type=submit] {
+    background-color:salmon;
+    border: purple 2px solid;
+    color: purple;
+    border-radius:5px;
+        
+}
+.container{
+    margin:20px;
+}

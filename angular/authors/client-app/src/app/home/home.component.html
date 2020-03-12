@@ -1,0 +1,20 @@
+<button [routerLink]="['/new']">Add an Author</button>
+<div class="container">
+  <div>
+    <table class="center" border=1>
+      <caption>Authors List</caption>
+      <tr>
+        <th>Index</th>
+        <th>Name</th>
+        <th>Edit Author</th>
+        <th>Delete An Author</th>
+      </tr>
+      <tr *ngFor="let author of authors, let i =index">
+        <td>{{i + 1}}</td>
+        <td>{{author.name}}</td>
+        <td><button [routerLink]="['/edit', author._id]">EDIT</button></td>
+        <td><button (click)="delete(author._id)">DELETE</button></td>
+      </tr>
+    </table>
+  </div>
+</div>

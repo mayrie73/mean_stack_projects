@@ -1,0 +1,10 @@
+<div class ="container">
+<form (submit)="onSubmit()">
+    <p>{{newAuthor | json}} </p>
+    <p>Add a New Author:</p>
+    <label for ="name">Name</label>
+    <input type="text" name="newAuthor.name" [(ngModel)]="newAuthor.name" /><br>
+    <input type="submit" value="Create Author" />
+    <button [routerLink]="['/']">Cancel</button>
+  </form>
+</div>

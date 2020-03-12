@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="socket.js"></script>
+  <title>Quoting Dojo</title>
+</head>
+
+<body>
+  <div>
+    <h1>Welcome to Quoting Dojo</h1>
+    <form action="/quotes" method="post">
+      <div>
+        <label>Your Name</label>
+        <input type="text" name="name" id="Name">
+      </div>
+      <br>
+      <div>
+        <label>Your Quote</label>
+        <textarea name="quote" rows="5" cols="30" id="quote"></textarea>
+      </div>
+      <br>
+      <div>
+        <input type="submit" value="Add My Quote!">
+      </div>
+      <br>
+    </form>
+    <button>
+      <a href="/result">Skip to Quotes</a>
+    </button>
+  </div>
+</body>
+
+</html>

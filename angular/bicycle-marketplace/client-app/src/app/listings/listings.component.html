@@ -1,0 +1,42 @@
+<form (submit)='onSubmitBike()'>
+  <div class="createListing">
+    <div class="imageUpload">
+      <p>Image Link :
+        <input type='text' name='url' required minlength="1" [(ngModel)]='bike.url' [ngClass]="{ boxborder : url.errors }" #url="ngModel">
+      </p>
+    </div>
+    <div class="mainContent">
+      Title:
+      <input type="text" name="title" [(ngModel)]="newBike.title">
+      <br> Description:
+      <input type="textarea" name="description" [(ngModel)]="newBike.description">
+    </div>
+    <div class="sideBar">
+      Price:
+      <input type="text" name="price" [(ngModel)]="newBike.price"> location:
+      <input type="text" name="location" [(ngModel)]="newBike.location">
+      <input type="submit" value="Create">
+    </div>
+  </div>
+</form>
+<div class="editListing">
+  <Form>
+    <div class="imageUpload">
+      <p>Image Link :
+        <input type='text' name='url' required minlength="1" [(ngModel)]='bike.url' [ngClass]="{ boxborder : url.errors }" #url="ngModel">
+      </p>
+    </div>
+    <div class="mainContent">
+      Title:
+      <input type="text" name="title" [(ngModel)]="newBike.title"> Description:
+      <input type="textarea" name="description" [(ngModel)]="newBike.description">
+    </div>
+    <div class="sideBar">
+      Price:
+      <input type="text" name="price" [(ngModel)]="newBike.price"> location:
+      <input type="text" name="location" [(ngModel)]="newBike.location">
+      <input type="submit" value="Update" />
+      <button (click)="delete(bike._id)">DELETE</button>
+    </div>
+  </Form>
+</div>

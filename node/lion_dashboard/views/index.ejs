@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="socket.js"></script>
+</head>
+<body>
+    <div>
+        <button><a href="/lions/new">Add a new Lion</a></button>
+        <img src="images/lion.jpeg" alt="Picture of a Lion">
+    </div>
+    <div>
+        <table border=1 >
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Edit a lion</th>
+                <th>Delete a lion</th>
+            </tr>
+            <% for(var lion of lions){%>
+                <tr>
+                 <td><a href="lions/<%=lion._id%>"><%= lion.name %></a></td>
+                 <td><%= lion.age %></td>
+                 
+                <td><button><a href="edit/<%=lion._id%>">Edit</a></button></td>
+                <td><form action = "/delete/<%=lion._id%>" method ="post">
+                 <input type ="submit" value= "delete">
+                 </form></td>
+                </tr>
+                <% } %>
+
+        </table>
+    </div>
+
+</body>
+
+</html>

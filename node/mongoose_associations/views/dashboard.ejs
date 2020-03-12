@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="socket.js"></script>
+</head>
+<body>
+	<div>
+		<form action="/posts" method="post">
+			<div>
+				<label>Create a new Post</label>
+			</div>
+			<div>
+				<textarea name="post" rows="5" cols="100"></textarea>
+			</div>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+	<div>
+		<% for(let post of posts) { %>
+			<p><%= post.user.name%> says <%= post.post %></p>
+			<% for(let comment of post.comments) {%>
+				<p> <%= comment.user.name%> commented <%= comment.comment %></p>
+			<% } %>
+			<div>
+				<form action="/comments/<%= post._id %>" method="post">
+					<div>
+						<textarea name="comment" rows="5" cols="60"></textarea>
+					</div>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+			<% } %>
+	</div>
+</body>
+
+
+</html>

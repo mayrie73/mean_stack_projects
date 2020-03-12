@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: papayawhip;
+    color: purple;
+    text-align: center;
+}
+button{
+    background-color:salmon;
+    border: purple 2px solid;
+    color: purple;
+    border-radius:5px;
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+caption{
+    background-color:salmon;
+    border: purple 2px solid;
+}
+input[type=submit] {
+    background-color:salmon;
+    border: purple 2px solid;
+    color: purple;
+    border-radius:5px;
+        
+}
+.container{
+    margin:100px;
+}
+.right{
+    display: inline-block;
+    margin: 100px;
+    border: solid 2px purple;
+}
+.left{
+    display: inline-block;
+    vertical-align: top;
+    margin: 100px;
+    border: solid 2px purple;
+}
+.createListing{
+    display: block;
+    margin: 20px;
+    width: 750px;
+    border: solid 2px purple;
+}
+.imageUpload{
+    display:inline-block;
+    width: 150px;
+    vertical-align: top;
+    margin:20px;
+}
+.mainContent{
+    display: inline-block;
+    width: 150px;
+    margin: 100px;
+    
+}
+.sideBar{
+    display: inline-block;
+    width: 150px;
+    margin:20px;
+}
+.editListing{
+    width: 750px;
+    margin:20px;
+    display: block;
+    border: solid 2px purple;
+}

@@ -1,0 +1,19 @@
+<div>
+    <table class = "center" border=1>
+    <caption>Product Details</caption>
+      <tr>
+        <th>Prouct ID</th>
+        <th>Name</th>
+        <th>Qty</th>
+        <th>Price</th>
+      </tr>
+     <tr>
+        <td>{{showProduct._id}}</td>
+        <td>{{showProduct.name}}</td>
+        <td>{{showProduct.quantity}}</td>
+        <td>{{showProduct.price}}</td>
+      </tr>
+    </table> 
+      <button [routerLink]="['/products']">Back</button>
+      <button (click)="delete(showProduct._id)">DELETE</button>
+  </div>

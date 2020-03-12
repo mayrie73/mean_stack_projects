@@ -1,0 +1,34 @@
+body{
+    background-color: peachpuff;
+    
+}
+h1, h2, h3{
+    color: brown;
+}
+p {
+ color: brown;
+}
+
+label{
+    color: brown;
+}
+input[type="submit"]{
+    background-color: papayawhip;
+    border: 2px salmon solid;
+    color: brown;
+    border-radius: 5px;
+}
+button{
+    background-color: papayawhip;
+    border-radius: 10px;
+    border: 2px salmon solid;
+    padding:5px;
+}
+a {
+    color:brown;
+    text-decoration: none;
+}
+table{
+    border: 1px solid brown;
+    color:brown;
+}

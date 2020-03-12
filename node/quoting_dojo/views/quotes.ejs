@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="socket.js"></script>
+  <title> Quotes </title>
+</head>
+
+<body>
+  <h1>Here are the Awesome Quotes!</h1>
+  <% for (var x in quotes) { %>
+    <h3>Name:
+      <%= quotes[x].name %>
+    </h3>
+    <p>Quote:
+      <%= quotes[x].quote %>
+    </p>
+    <hr>
+    <% } %>
+      <button>
+        <a href="/">Add a New Quote</a>
+      </button>
+</body>
+
+</html>

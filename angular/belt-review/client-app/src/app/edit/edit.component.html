@@ -1,0 +1,25 @@
+<div>
+  <table class = "center" border=1>
+  <caption>Update Product</caption>
+    <tr>
+      <th>Prouct ID</th>
+      <th>Name</th>
+      <th>Qty</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>{{updatedProduct._id}}</td>
+      <td>{{updatedProduct.name}}</td>
+      <td>{{updatedProduct.quantity}}</td>
+      <td>{{updatedProduct.price}}</td>
+    </tr>
+  </table><br><br>
+    <form  (submit)="onSubmitUpdate()">
+    Product ID : <input type="text" name="updatedProduct._id" [(ngModel)]="updatedProduct._id"  ><br><br>
+    Name: <input type="text" name="updatedProduct.name" [(ngModel)]="updatedProduct.name"  ><br><br>
+    Qty: <input type="text" name="updatedProduct.quantity" [(ngModel)]="updatedProduct.quantity"  ><br><br>
+    Price: <input type="text" name="updatedProduct.price" [(ngModel)]="updatedProduct.price"  ><br><br>
+    <button input type="submit" value = "submit">Update</button>
+    <button [routerLink]="['/products']">Reset</button>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Show User</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="socket.js"></script>
+</head>
+
+<body>
+    <div>
+        <h3><%=user._id%></h3>
+        <h3><%=user.name%></h3>
+        <h3><%=user.age%></h3>
+        <h3><%=user.email%></h3>
+        <hr>
+    </div>
+    <a href="/">Go Back</a>
+</body>
+
+</html>

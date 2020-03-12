@@ -1,0 +1,24 @@
+body{
+    background-color: papayawhip;
+    text-align: center;
+    color: purple;
+}
+h1{
+    color: purple;
+}
+input[type="submit"]{
+    background-color: papayawhip;
+    border: 2px salmon solid;
+    color: purple;
+    border-radius: 5px;
+}
+button{
+    background-color: papayawhip;
+    border-radius: 10px;
+    border: 2px salmon solid;
+    padding:5px;
+}
+a {
+    color:purple;
+    text-decoration: none;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="socket.js"></script>
+    <title>Add New Users</title>
+</head>
+
+<body>
+    <h1>Form to Add A New User</h1>
+    <form action="/users" method="post">
+        <div>
+            <label>Name</label>
+            <input type="text" name="name">
+        </div><br>
+        <div>
+            <label>Age</label>
+            <input type="number" name="age">
+        </div><br>
+        <div>
+            <label>Email</label>
+            <input type="email" name="email">
+        </div><br>
+        <div>
+            <label>Password</label>
+            <input type="password" name="password">
+        </div><br>
+        <input type="submit" value="submit">
+        <form><br><br>
+        <a href="/">Go Back</a>
+</body>
+
+</html>

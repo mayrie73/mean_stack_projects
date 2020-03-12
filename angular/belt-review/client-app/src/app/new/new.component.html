@@ -1,0 +1,13 @@
+<div class ="container">
+  <form (submit)="onSubmit()">
+      <h1>New Product</h1>
+      <label for ="name">Name</label>
+      <input type="text" name="newProduct.name" [(ngModel)]="newProduct.name" /><br>
+      <label for ="name">Qty</label>
+      <input type="text" name="newProduct.quantity" [(ngModel)]="newProduct.quantity" /><br>
+      <label for ="name">Price</label>
+      <input type="text" name="newProduct.price" [(ngModel)]="newProduct.price" /><br>
+      <input type="submit" value="Create" />
+      <button [routerLink]="['/products']">Reset</button>
+    </form>
+  </div>

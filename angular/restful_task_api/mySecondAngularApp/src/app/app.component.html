@@ -1,0 +1,95 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div>
+  <h1>
+    Welcome to {{ title }}
+  </h1>
+  <div>
+    <button (click)="getTasksFromService()">Get All Tasks</button>
+  </div>
+  <table border=1>
+    <tr>
+      <th>Index</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let task of tasks, let i =index">
+      <td>{{i + 1}}</td>
+      <td>{{task.title}}</td>
+      <td>{{task.description}}</td>
+      <td><button (click)="editFieldInfo(task)">Edit</button></td>
+      <td>
+        <button (click)="delete(task._id)">Delete</button>
+      </td>
+    </tr>
+  </table>
+  <h1> Form to Create a New Task</h1>
+  <form (submit)="onSubmit()">
+    <p>{{newTask | json}} </p>
+    <label for ="title">Title</label>
+    <input type="text" name="newTask.title" [(ngModel)]="newTask.title" /><br>
+    <label for ="description">Description</label>
+    <input type="text" name="newTask.description" [(ngModel)]="newTask.description" /><br>
+    <input type="submit" value="Create Task" />
+  </form>
+  <br>
+  <br>
+    <div *ngIf="toggleEdit" id="edit" class="task">
+    <h2>Form to Edit a task</h2>
+    <p>{{editTask | json}}</p>
+    <table border=1>
+      <tr>
+        <th>Task id</th>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>{{ editTask.id}}</td>
+        <td>{{ editTask.title }}</td>
+        <td>{{ editTask.description }}</td>
+      </tr>
+    </table>
+    <!--<span>Title:<p>{{ editTask.title }}</p></span>
+    <span>Description:<p>{{ editTask.description }}</p></span>-->
+    <form (submit) = "update()">
+      Title: <input type="text" name="editTask.title" [(ngModel)]="editTask.title"  >
+      Description: <input  type="text" name="editTask.description" [(ngModel)]="editTask.description">
+      <input type="submit" value = "Update Task" />
+      <button (click)="toggleEditForm()">Cancel</button>
+    </form>
+  </div>
+  <br>
+  <br>
+</div>
+
+  <!--<button (click)="myButtonEvent()">myEventButton</button>
+  <br> {{user | json }}
+  <form (submit)="mySubmitEvent()">
+    <div>
+      <label>Name</label>
+      <input type="text" name="name" [(ngModel)]="user.name" #name="ngModel" required minlength="4" maxlength="15"> {{name.errors | json}}
+      <span *ngIf="name.errors && name.errors.required && name.touched">Name cannot be blank</span>
+    </div>
+    <div>
+      <label>Email</label>
+      <input type="email" name="email" [(ngModel)]="user.email">
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+  <div>
+    <table border=1>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </table>
+  </div>-->
+
+  <!--<p *ngFor="let task of tasks">,{{task._id}} {{task.title}} {{task.description}})</p>-->
+

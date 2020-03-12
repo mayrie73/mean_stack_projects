@@ -1,0 +1,12 @@
+<div class="container">
+  <div>
+    <h1>Mine ShintoCoins</h1>
+    <h3>Here you can mine ShintoCoins by being the first to solve the algorithm:</h3>
+    <h3>{{ algorithm.question }}</h3>
+    <form (submit)="mineCoin()">
+      <input type="text" name="answer" [(ngModel)]="answer">
+      <input type="submit" value="Mine" />
+    </form>
+  </div>
+
+</div>
